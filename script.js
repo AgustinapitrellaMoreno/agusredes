@@ -32,6 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+fetch('https://likes-system-backend.vercel.app')
+    .then(response => response.json())
+    .then(data => {
+    console.log('Número de likes:', data.likes);
+    // Actualizar la interfaz con la información recibida
+})
+    .catch(error => {
+    console.error('Error:', error);
+});
 //ESTE CONTENIDO ES PARA EL BARS DE LA DERECHA SUPERIOR
 /*/
 // Obtener los elementos
