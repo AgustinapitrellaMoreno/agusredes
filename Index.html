@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="fa-solid fa-heart like-button">
+                <span id="like-count">0</span>
+            </i>
+            <a href="#" class="back-button" id="menu-button"><i class="fa-solid fa-bars"></i></a>
+            
+        </div> 
+        <!-- EL MENU DEL BARS -->
+        <!--
+        <div id="side-menu" class="side-menu">
+            <div class="side-menu-blur"></div>  Fondo con blur 
+            <div class="side-menu-content"> Contenido del menú 
+                <a href="#">En Proceso</a>
+            </div>
+        </div>
+        -->
+        
+        <!-- foto -->
+        <div class="album-art">
+            <img src="foto.png" alt="Artist">
+        </div>
+        <div class="code">Agustina</div>
+        <!-- redes e portafolio -->
+        <div class="controls">
+            <div class="song">
+                <a href="https://youtu.be/406oFxN4Tu0?si=qQpJuhi_JvsnbSpp" class="link-button">
+                    <p>MUZZA</p>
+                    <span>Vale Acevedo</span>
+                    <button><i class="fa-solid fa-music"></i></button>
+                </a>
+            </div>
+            <div class="song">
+                <a href="https://www.instagram.com/agus.m0ren0" class="link-button">
+                    <p>Instagram</p>
+                    <span>@agus.m0ren0</span>
+                    <button><i class="fa-brands fa-instagram"></i></button>
+                </a>
+            </div>
+            <div class="song">
+                <a href="https://open.spotify.com/user/31yuqvzjurreo5723yyjoguouray?si=7de722f396d84477" class="link-button">
+                    <p>Spotify</p>
+                    <span>Titi/Titi</span>
+                    <button><i class="fa-brands fa-spotify"></i></button>
+                </a>
+            </div>
+            <div class="song">
+                <a href="#" class="link-button">
+                    <p>Discord</p>
+                    <span>kian.nnnn</span>
+                    <button><i class="fa-brands fa-discord"></i></button>
+                </a>
+            </div>
+            <div class="song">
+                <a href="#" class="link-button">
+                    <p>Portafolio</p>
+                    <span>Proceso</span>
+                    <button><i class="fa-solid fa-briefcase"></i></button>
+                </a>
+            </div>
+            <div class="song">
+                <a href="#" class="link-button">
+                    <p>Tienda</p>
+                    <span>Proyecto</span>
+                    <button><i class="fa-solid fa-shirt"></i></button>
+                </a>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <p>created by Agustina</p>
+        </div>
+    </div>
+    <!-- scrip para los me gustas -->
+    <script src="script.js">
+        // Selecciona el botón de "Me gusta" y el contador de "me gusta"
+        const likeButton = document.querySelector('.like-button');
+        const likeCount = document.getElementById('like-count');
+
+        // Cargar el número de "me gusta" guardado en localStorage
+        let likes = localStorage.getItem('likes') || 0;
+        likeCount.textContent = likes;
+
+        // Evento de clic para incrementar el número de "me gusta"
+        likeButton.addEventListener('click', () => {
+            // Incrementar los "me gusta"
+            likes++;
+            likeCount.textContent = likes;
+            localStorage.setItem('likes', likes);
+
+            // Cambiar el color del ícono a rojo
+            likeButton.classList.add('liked');
+
+            // Volver al color original después de 3 segundos
+            setTimeout(() => {
+                likeButton.classList.remove('liked');
+            }, 300);
+        });
+    </script>
+    
+</body>
+</html>

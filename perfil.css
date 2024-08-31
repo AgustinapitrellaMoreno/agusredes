@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
+.code {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.like-button {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.like-button.liked {
+    color: #ec210b;
+}
+
+.like-button span {
+    font-size: 20px;
+}
+
+.liked {
+    color: red !important; /* Color rojo cuando está en estado "me gusta" */
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.album-art {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.album-art img {
+    width: 300px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.link-button {
+    align-items: center;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.048);
+    display: flex;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px auto;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para suavizar el cambio de color y el movimiento */
+}
+
+a.link-button{
+    color: #000000;
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+}
+
+.controls .song {
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.048);
+}
+
+.controls .song p {
+    margin: 0;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.controls .song span {
+    font-size: 12px;
+    color: #888;
+}
+
+.controls .song button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 1;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.controls .song.playing button {
+    background-color: #ccc;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+.back-button, .like-button {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.like-button {
+    position: relative;
+}
+
+.like-button #like-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+/* MENU DE LA BARS 
+.side-menu {
+    background-color: #ffffffd2;
+    width: 0;           Comienza oculto 
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    -webkit-box-shadow: 22px 4px 44px -13px rgba(0,0,0,0.38);
+    -moz-box-shadow: 22px 4px 44px -13px rgba(0,0,0,0.38);
+    box-shadow: 22px 4px 44px -13px rgba(0,0,0,0.38);
+    position: fixed;
+    z-index: 2;
+    top: 8.2em;
+    left: 0;
+    overflow-x: hidden;
+    transition: width 0.5s;         Transición suave 
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.side-menu.open {
+    width: 170px;        Ancho cuando está abierto 
+}
+
+
+
+.side-menu-content {
+    position: relative;
+    z-index: 1;
+}
+
+.side-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    
+    transition: 0.2s;
+}
+
+.side-menu a:hover {
+    color: #000000;
+}
+
+.side-menu .close-btn {
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    color: #000000;
+}
+*/
