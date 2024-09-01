@@ -83,31 +83,7 @@
         </div>
     </div>
     <!-- scrip para los me gustas -->
-    <script src="script.js">
-        // Selecciona el botón de "Me gusta" y el contador de "me gusta"
-        const likeButton = document.querySelector('.like-button');
-        const likeCount = document.getElementById('like-count');
-
-        // Cargar el número de "me gusta" guardado en localStorage
-        let likes = localStorage.getItem('likes') || 0;
-        likeCount.textContent = likes;
-
-        // Evento de clic para incrementar el número de "me gusta"
-        likeButton.addEventListener('click', () => {
-            // Incrementar los "me gusta"
-            likes++;
-            likeCount.textContent = likes;
-            localStorage.setItem('likes', likes);
-
-            // Cambiar el color del ícono a rojo
-            likeButton.classList.add('liked');
-
-            // Volver al color original después de 3 segundos
-            setTimeout(() => {
-                likeButton.classList.remove('liked');
-            }, 300);
-        });
-    </script>
+    <script src="script.js"></script>
     
 </body>
 </html>
